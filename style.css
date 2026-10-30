@@ -106,3 +106,13 @@ textarea{min-height:140px}
 @media(max-width:860px){.sub{padding:12px 20px;gap:12px}.sub nav{margin-left:0;gap:18px}.phero{margin:0 10px;padding-top:48px}.grid4{grid-template-columns:1fr}.page{padding:48px 20px}.feats{padding:56px 20px}}
 .app svg.sicon,.card svg.sicon,.pname svg.sicon{fill:none;stroke:none}
 .app svg.sicon{width:40px;height:40px}
+/* ---- sunset scene ---- */
+.scene{overflow:hidden;background:#fff}
+.scene-svg{display:block;width:100%;height:clamp(260px,46vw,620px)}
+html.js .scene-svg{opacity:0;transform:translateY(32px);transition:opacity .9s ease,transform .9s ease}
+html.js .scene.in .scene-svg{opacity:1;transform:none}
+.scene .glow{opacity:.85}
+html.js .scene:not(.in) .glow{opacity:0}
+html.js .scene.in .glow{transition:opacity 1.8s ease .6s}
+@media(prefers-reduced-motion:reduce){html.js .scene-svg{opacity:1;transform:none;transition:none}html.js .scene:not(.in) .glow{opacity:.85}}
+img.scene-svg{object-fit:cover;object-position:50% 45%}
